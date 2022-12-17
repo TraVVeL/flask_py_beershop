@@ -40,13 +40,16 @@
 	<!-- Eshop StyleSheet -->
 	<link rel="stylesheet" href="/static/css/reset.css">
 	<link rel="stylesheet" href="/static/css/style.css">
+
     <link rel="stylesheet" href="/static/css/responsive.css">
+
+    <link rel="stylesheet" href="/static/css/my_css.css">
+    <link rel="stylesheet" href="/static/css/regist_login.css">
 
 	
 	
 </head>
 <body class="js">
-	
 	<!-- Preloader -->
 	<div class="preloader">
 		<div class="preloader-inner">
@@ -66,6 +69,123 @@
 		<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#InstantLoadModal">
 		  Launch demo modal
 		</button>
+
+		<button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#ModalLoginForm">
+			Launch demo modal
+		</button>
+
+		<div class="col-sm-4 ">
+			<div class="button-card mt-4">
+				<div class="action-buttons mb-3 mt-2">
+					<!-- action button for modal style 2 start -->
+					<a href="#loginModal2" data-toggle="modal" class="btn btn-theme btn-primary text-white"> Login</a>
+					<a href="#registerModal2" data-toggle="modal" class="btn btn-theme btn-success text-white">Register</a>
+					<!-- action button for modal style 2 end -->
+				</div>
+				<img src="assets/demo/style-2-demo-dark.jpg">
+			</div>
+		</div>
+
+
+
+<!--modal style 2 start -->
+
+	<!-- login modal 2 -->
+	<div id="loginModal2" class="modal-style-2 dark modal ">
+		<div class="modal-dialog modal-login">
+			<div class="modal-content">
+				<div class="modal-header p-0">				
+					<h4 class="modal-title">Вход</h4>
+	                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+				</div>
+				<div class="modal-body">
+					<!-- dont forget to add action and action method  -->
+					<form action="" method="" class="mt-3">
+						<div class="form-group">
+							<div class="input-group">
+								<span class="input-group-addon"><i class="fa fa-user"></i></span>
+								<input type="text" class="form-control" name="username" placeholder="Логин" required="required">
+							</div>
+						</div>
+						<div class="form-group">
+							<div class="input-group">
+								<span class="input-group-addon"><i class="fa fa-lock"></i></span>
+								<input type="password" class="form-control" name="password" placeholder="Пароль" required="required" autocomplete="on">
+							</div>
+						</div>
+						<div class="row pl-1 pr-1">
+                            <div class="col text-left">
+                                <label class="custom-control custom-checkbox">
+                                    <input type="checkbox" class="custom-control-input" id="item_checkbox" name="item_checkbox" value="option1">
+                                    <span class="custom-control-label">&nbsp;Запомнить меня</span>
+                                </label>
+                            </div>
+                            <div class="col text-right hint-text pt-0">
+                                <a href="" class="text-danger">Забыли пароль?</a>
+                            </div>
+                        </div>
+						<div class="form-group text-center mt-2 mb-0">
+							<button type="submit" class="btn btn-theme btn-success text-white">Войти</button>
+							
+						</div>
+					</form>
+				</div>
+				<div class="modal-footer">Нет аккаунта? &nbsp;<a href="#registerModal2" data-dismiss="modal" data-toggle="modal"> Регистрация</a></div>
+			</div>
+		</div>
+	</div>  
+	<!-- register modal 2 -->
+	<div id="registerModal2" class="modal-style-2 dark modal ">
+		<div class="modal-dialog modal-login">
+			<div class="modal-content">
+				<div class="modal-header p-0">				
+					<h4 class="modal-title">Регистрация</h4>
+	                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+				</div>
+				<div class="modal-body">
+					<form action="" method="post" class="mt-3">
+						<div class="form-group">
+							<div class="input-group">
+								<span class="input-group-addon"><i class="fa fa-user"></i></span>
+								<input type="text" class="form-control" name="name" placeholder="Имя" required="required">
+							</div>
+						</div>
+						<div class="form-group">
+							<div class="input-group">
+								<span class="input-group-addon"><i class="fa fa-envelope"></i></span>
+								<input type="text" class="form-control" name="email" placeholder="Адрес эл.почты" required="required">
+							</div>
+						</div>
+						<div class="form-group">
+							<div class="input-group">
+								<span class="input-group-addon"><i class="fa fa-lock"></i></span>
+								<input type="password" class="form-control" name="password" placeholder="Пароль" required="required" autocomplete="on">
+							</div>
+						</div>
+						<div class="form-group">
+							<div class="input-group">
+								<span class="input-group-addon"><i class="fa fa-eye-slash"></i></span>
+								<input type="password" class="form-control" name="password_confirmation" placeholder="Повтор пароля" required="required" autocomplete="on">
+							</div>
+						</div>
+
+						<div class="form-group text-center">
+							<button id="signup-button" type="submit" class="btn btn-primary btn-sm">Регистрация</button>
+							
+						</div>
+					</form>
+
+				</div>
+				<div class="modal-footer">Уже есть аккаунт? &nbsp;<a href="#loginModal2" data-dismiss="modal" data-toggle="modal"> Войти</a></div>
+			</div>
+		</div>
+	</div> 
+<!--modal style 2 end -->
+
+
+
+
+
 
 		<!-- Modal -->
 		<div class="modal fade" id="InstantLoadModal" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -129,7 +249,8 @@
 								<li><i class="ti-location-pin"></i> Магазины</li>
 								<li><i class="ti-pin-alt"></i> <a href="#">Контакты</a></li>
 								<li><i class="ti-user"></i> <a href="#">Мой аккаунт</a></li>
-								<li><i class="ti-power-off"></i><a href="login.html#">Войти</a></li>
+								<li><i class="ti-power-off"></i><a href="#loginModal2" data-toggle="modal"> Войти</a></li>
+
 							</ul>
 						</div>
 						<!-- End Top Right -->
@@ -429,8 +550,8 @@
 								{% for i in products -%}
 								<div class="tab-pane fade show active" id="man" role="tabpanel">
 									<div class="tab-single">
-										<div class="row">
-											<div class="col-xl-3 col-lg-4 col-md-4 col-12">
+										<div class="">
+											<div class="">
 												<div class="single-product">
 													<div class="product-img">
 														<a href="{{i.url}}">
@@ -438,11 +559,11 @@
 															<img class="hover-img" src="{{i.image_url}}" alt="#">
 														</a>
 														<div class="button-head">
-															<div class="product-action">
+<!-- 															<div class="product-action">
 																<a data-toggle="modal" data-target="#exampleModal" title="Quick View" href="#"><i class=" ti-eye"></i><span>текст</span></a>
 																<a title="Wishlist" href="#"><i class=" ti-heart "></i><span>текст</span></a>
 																<a title="Compare" href="#"><i class="ti-bar-chart-alt"></i><span>текст</span></a>
-															</div>
+															</div> -->
 															<div class="product-action-2">
 																<a title="добавить в корзину" href="#">добавить в корзину</a>
 															</div>
@@ -451,7 +572,7 @@
 													<div class="product-content">
 														<h3><a href="product-details.html">{{i.name}}</a></h3>
 														<div class="product-price">
-															<span>{{i.price}}</span>
+															<span>{{i.price}}</span><span> Руб.</span>
 														</div>
 													</div>
 												</div>
@@ -1263,11 +1384,13 @@
 	<script src="js/arcticmodal/jquery.arcticmodal-0.3.min.js"></script>
 	<link rel="stylesheet" href="js/arcticmodal/jquery.arcticmodal-0.3.css">
 
-	<script type="text/javascript">
+<!--
+ 	<script type="text/javascript">
 	    $(window).on('load', function() {
 	        $('#InstantLoadModal').modal('show');
 	    });
-	</script>
+	</script> 
+-->
 	<!-- end for adault content -->
 
 	<!-- Jquery -->
